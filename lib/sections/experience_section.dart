@@ -17,14 +17,20 @@ class ExperienceSection extends StatelessWidget {
   const ExperienceSection({super.key});
 
   static const _jobs = [
-    _Job('2025 — Present', 'Senior Software Engineer', 'Dsaas.ai',
+    _Job('Jan 2026 — Present', 'Associate Lead Software Engineer', 'Simplify',
         'Leading Flutter development and building scalable enterprise applications used by thousands of users.',
         Icons.workspace_premium_rounded,
         current: true),
-    _Job('2022 — 2025', 'Software Engineer', 'Dsaas.ai',
+    _Job('Feb 2024 — Dec 2025', 'Senior Software Engineer', 'Simplify',
         'Developed multiple cross-platform apps and contributed to architecture and performance improvements.',
+        Icons.workspace_premium_rounded),
+    _Job('Jun 2022 — Jan 2024', 'Software Engineer', 'Simplify',
+        'Built and maintained Flutter applications for clients across different domains.',
         Icons.code_rounded),
-    _Job('2020 — 2022', 'Flutter Developer', 'Agira Technologies',
+    _Job('Mar 2021 — Jun 2022', 'Software Engineer', 'LightningLogistics/Micelio',
+        'Built and maintained Flutter applications for clients across different domains.',
+        Icons.bolt_rounded),
+    _Job('Jul 2019 — Feb 2021', 'Software Engineer', 'Aponiar Solutions',
         'Built and maintained Flutter applications for clients across different domains.',
         Icons.bolt_rounded),
   ];
