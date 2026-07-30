@@ -43,7 +43,7 @@ class AchievementsSection extends StatelessWidget {
         icon: Icons.groups_rounded,
         iconColor: AppColors.primary,
         value: 'Team Lead',
-        label: 'Mentored 4+ Developers',
+        label: 'Mentored 20+ Developers',
         width: mobile ? (width - 40 - 14) : 210,
       ),
     ];
