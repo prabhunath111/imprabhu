@@ -82,22 +82,22 @@ class _ContactSectionState extends State<ContactSection> {
         _ContactRow(
           icon: Icons.email_rounded,
           label: 'Email',
-          value: 'prabhu.tiwary@gmail.com',
-          onTap: () => _openUrl('mailto:prabhu.tiwary@gmail.com'),
+          value: 'prabhutiwari111@gmail.com',
+          onTap: () => _openUrl('mailto:prabhutiwari111@gmail.com'),
         ),
         const SizedBox(height: 16),
         _ContactRow(
           icon: Icons.business_center_rounded,
           label: 'LinkedIn',
-          value: '/prabhu-tiwary',
-          onTap: () => _openUrl('https://linkedin.com/in/prabhu-tiwary'),
+          value: '/prabhu-india',
+          onTap: () => _openUrl('https://www.linkedin.com/in/prabhu-india'),
         ),
         const SizedBox(height: 16),
         _ContactRow(
           icon: Icons.code_rounded,
           label: 'GitHub',
-          value: 'github.com/prabhu-tiwary',
-          onTap: () => _openUrl('https://github.com/prabhu-tiwary'),
+          value: 'github.com/prabhunath111',
+          onTap: () => _openUrl('https://github.com/prabhunath111'),
         ),
       ],
     );
