@@ -124,8 +124,8 @@ class _HomePageState extends State<HomePage> {
                         HeroSection(
                           onDownloadResume: () =>
                               _openUrl('https://example.com/prabhu-tiwary-resume.pdf'),
-                          onViewGithub: () => _openUrl('https://github.com/prabhu-tiwary'),
-                          onLinkedIn: () => _openUrl('https://linkedin.com/in/prabhu-tiwary'),
+                          onViewGithub: () => _openUrl('https://github.com/prabhunath111'),
+                          onLinkedIn: () => _openUrl('https://linkedin.com/in/prabhu-india'),
                         ),
                         AboutSection(key: _aboutKey),
                         SkillsSection(key: _skillsKey),

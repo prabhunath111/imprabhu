@@ -14,8 +14,8 @@ class AboutSection extends StatelessWidget {
       _StatData(Icons.calendar_month_rounded, AppColors.primary, '7+', 'Years Experience'),
       _StatData(Icons.rocket_launch_rounded, AppColors.secondary, '10+', 'Apps Deployed'),
       _StatData(Icons.verified_rounded, AppColors.accent, '100%', 'Client Satisfaction'),
-      _StatData(Icons.play_arrow_rounded, AppColors.success, '10', 'Apps on Play Store'),
-      _StatData(Icons.apple_rounded, AppColors.warning, '10', 'Apps on App Store'),
+      _StatData(Icons.play_arrow_rounded, AppColors.success, '10+', 'Apps on Play Store'),
+      _StatData(Icons.apple_rounded, AppColors.warning, '10+', 'Apps on App Store'),
     ];
 
     final textColumn = Column(

@@ -148,7 +148,7 @@ class _HeroText extends StatelessWidget {
               border: Border.all(color: AppColors.primary.withValues(alpha: 0.35)),
             ),
             child: Text(
-              'Senior Flutter Engineer',
+              'Associate Lead Software Engineer',
               style: GoogleFonts.inter(
                 color: AppColors.primary,
                 fontSize: 13,

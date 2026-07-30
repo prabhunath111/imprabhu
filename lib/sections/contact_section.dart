@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../theme/app_theme.dart';
 import '../widgets/common_widgets.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 class ContactSection extends StatefulWidget {
   const ContactSection({super.key});
@@ -15,6 +17,7 @@ class _ContactSectionState extends State<ContactSection> {
   final _nameCtrl = TextEditingController();
   final _emailCtrl = TextEditingController();
   final _messageCtrl = TextEditingController();
+  bool _isSending = false;
 
   @override
   void dispose() {
@@ -29,19 +32,49 @@ class _ContactSectionState extends State<ContactSection> {
     if (await canLaunchUrl(uri)) await launchUrl(uri, webOnlyWindowName: '_blank');
   }
 
-  void _send() {
+  Future<void> _send() async {
     if (_nameCtrl.text.trim().isEmpty || _emailCtrl.text.trim().isEmpty || _messageCtrl.text.trim().isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Please fill in all fields before sending.')),
       );
       return;
     }
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Thanks! Your message has been noted. 🎉')),
+
+    setState(() => _isSending = true);
+
+    final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+
+    final response = await http.post(
+      url,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: jsonEncode({
+        'service_id': 'service_pgnd9s1',
+        'template_id': 'template_97mgabw',
+        'user_id': 'pfsTvx85CypXjY7wH',
+        'template_params': {
+          'user_name': _nameCtrl.text,
+          'user_email': _emailCtrl.text,
+          'message': _messageCtrl.text,
+        }
+      }),
     );
+
+    if (response.statusCode == 200) {
+      if(mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Thanks! Your message has been noted. 🎉')));
+      }
+    } else {
+      if(mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Failed to send email. Please try again.')));
+      }
+    }
+
     _nameCtrl.clear();
     _emailCtrl.clear();
     _messageCtrl.clear();
+    setState(() => _isSending = false);
   }
 
   InputDecoration _decoration(String hint) {
@@ -139,7 +172,19 @@ class _ContactSectionState extends State<ContactSection> {
             decoration: _decoration('Your Message'),
           ),
           const SizedBox(height: 16),
-          AppButton(label: 'Send Message', icon: Icons.send_rounded, onPressed: _send),
+          _isSending
+              ? const Center(
+                  child: SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2,
+                      valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
+                    ),
+                  ),
+                )
+              : AppButton(
+                  label: 'Send Message', icon: Icons.send_rounded, onPressed: _send),
         ],
       ),
     );
