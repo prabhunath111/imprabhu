@@ -113,7 +113,7 @@ class _HeroText extends StatelessWidget {
       children: [
         RevealOnScroll(
           child: Text(
-            "Hiiii, I'm 👋",
+            "Hi, I'm 👋",
             style: GoogleFonts.spaceGrotesk(
               color: AppColors.textPrimary,
               fontSize: mobile ? 24 : 28,
