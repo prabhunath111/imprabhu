@@ -32,7 +32,7 @@ class FooterSection extends StatelessWidget {
             ),
             if (mobile) const SizedBox(height: 10),
             Text(
-              '© 2024 Prabhu Nath Tiwary. All rights reserved.',
+              '© 2025 Prabhu Nath Tiwary. All rights reserved.',
               style: GoogleFonts.inter(color: AppColors.textMuted, fontSize: 12.5),
             ),
           ],
