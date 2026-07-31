@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../theme/app_theme.dart';
 import '../widgets/common_widgets.dart';
 
@@ -30,29 +31,26 @@ class _TestimonialsSectionState extends State<TestimonialsSection> {
       'Dsaas.ai',
     ),
     _Testimonial(
-      'Prabhu is an exceptional engineer who consistently delivers high-quality '
-      'solutions with clean code and great attention to detail.',
-      'Product Manager',
-      'Dsaas.ai',
+      "I've had the chance to work closely with Prabhu Nath, and he's someone you can always rely on. He manages the team really well, breaks down tasks clearly, and makes sure work moves smoothly without chaos. He’s a strong software engineer who never compromises on quality and always delivers on time. What stands out most to me is that whenever there's an emergency or a tough situation, Prabhu is always the first one to step up and take ownership. Working with him has been a great experience, and any team would be lucky to have him.",
+      'Software Engineer',
+      'hireHQ.ai',
     ),
     _Testimonial(
-      'One of the most reliable Flutter engineers I have worked with — he owns '
-      'problems end to end and ships on time, every time.',
-      'Engineering Lead',
-      'Dsaas.ai',
+      "I had the opportunity to work closely with Prabhu on multiple mobile features, and he consistently stood out for his technical excellence, ownership mindset, and reliability. He has a deep understanding of Flutter and frontend architecture, and he translates complex product requirements into clean, scalable, and high-performance user interfaces with great attention to detail and UX. \nWhat I truly appreciate about Prabhu is his proactive approach to problem-solving. He identifies potential issues early, suggests thoughtful improvements to implementation and architecture, and ensures code quality through thorough reviews. He collaborates smoothly with product, design, and QA, helping the team move faster without compromising on quality.\nBeyond technical skills, Prabhu brings a calm, supportive leadership style to the team. He’s approachable, always willing to guide teammates, and creates a positive, collaborative environment. His sense of ownership, accountability, and commitment to continuous improvement make him a strong asset to any frontend or Flutter team. I highly recommend Prabhu and would gladly work with him.",
+      'Software Engineer',
+      'Dsaas.ai & hireHQ.ai',
     ),
     _Testimonial(
-      'Prabhu turned our clunky prototype into a polished, production-ready app '
-      'that our users genuinely love.',
-      'Founder',
-      'Agira Technologies (Client)',
+      "I had the opportunity to work closely with Prabhu at SimplifyVMS, and he consistently did an excellent job supporting both the team and individual teammates. Prabhu brought valuable insights to the table and took the time to mentor and handhold team members, guiding them whenever needed. He was our go-to person for everything related to mobile development as well as the broader application, and his reliability and expertise made a meaningful impact on our work.",
+      'QA Lead',
+      'Dsaas.ai',
     ),
   ];
 
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(const Duration(seconds: 15), (_) {
+    _timer = Timer.periodic(const Duration(seconds: 5), (_) {
       if (!mounted) return;
       final next = (_page + 1) % _items.length;
       _controller.animateToPage(
@@ -72,14 +70,30 @@ class _TestimonialsSectionState extends State<TestimonialsSection> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final mobile = isMobile(width);
+    final double width = MediaQuery.sizeOf(context).width;
+    final bool mobile = isMobile(width);
 
     return Section(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const RevealOnScroll(child: SectionLabel('Testimonials')),
+          Row(
+            mainAxisAlignment: .spaceBetween,
+            children: [
+              const RevealOnScroll(child: SectionLabel('Testimonials')),
+              RevealOnScroll(
+                delay: const Duration(milliseconds: 100),
+                child: TextButton.icon(
+                  onPressed: () => _open('https://www.linkedin.com/in/prabhu-india/details/recommendations/?detailScreenTabIndex=0'),
+                  icon: const Icon(Icons.arrow_forward_rounded, size: 16, color: AppColors.primary),
+                  label: Text(
+                    'Read All',
+                    style: GoogleFonts.inter(color: AppColors.primary, fontWeight: FontWeight.w600, fontSize: 13),
+                  ),
+                ),
+              ),
+            ],
+          ),
           const SizedBox(height: 24),
           RevealOnScroll(
             delay: const Duration(milliseconds: 100),
@@ -152,5 +166,12 @@ class _TestimonialsSectionState extends State<TestimonialsSection> {
         ],
       ),
     );
+  }
+
+  Future<void> _open(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, webOnlyWindowName: '_blank');
+    }
   }
 }

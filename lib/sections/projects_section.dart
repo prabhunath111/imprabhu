@@ -83,7 +83,7 @@ class ProjectsSection extends StatelessWidget {
               RevealOnScroll(
                 delay: const Duration(milliseconds: 100),
                 child: TextButton.icon(
-                  onPressed: () => _open('https://github.com/prabhu-tiwary'),
+                  onPressed: () => _open('https://github.com/prabhunath111/repositories'),
                   icon: const Icon(Icons.arrow_forward_rounded, size: 16, color: AppColors.primary),
                   label: Text(
                     'View All Projects',

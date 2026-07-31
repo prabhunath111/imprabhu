@@ -377,7 +377,7 @@
       "name": "prabhu_portfolio",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.12"
     }
   ],
   "generator": "pub",
