@@ -31,6 +31,11 @@ class _TestimonialsSectionState extends State<TestimonialsSection> {
       'Dsaas.ai',
     ),
     _Testimonial(
+      "I had the opportunity to work closely with Prabhu at SimplifyVMS, and he consistently did an excellent job supporting both the team and individual teammates. Prabhu brought valuable insights to the table and took the time to mentor and handhold team members, guiding them whenever needed. He was our go-to person for everything related to mobile development as well as the broader application, and his reliability and expertise made a meaningful impact on our work.",
+      'QA Lead',
+      'Dsaas.ai',
+    ),
+    _Testimonial(
       "I've had the chance to work closely with Prabhu Nath, and he's someone you can always rely on. He manages the team really well, breaks down tasks clearly, and makes sure work moves smoothly without chaos. He’s a strong software engineer who never compromises on quality and always delivers on time. What stands out most to me is that whenever there's an emergency or a tough situation, Prabhu is always the first one to step up and take ownership. Working with him has been a great experience, and any team would be lucky to have him.",
       'Software Engineer',
       'hireHQ.ai',
@@ -40,11 +45,7 @@ class _TestimonialsSectionState extends State<TestimonialsSection> {
       'Software Engineer',
       'Dsaas.ai & hireHQ.ai',
     ),
-    _Testimonial(
-      "I had the opportunity to work closely with Prabhu at SimplifyVMS, and he consistently did an excellent job supporting both the team and individual teammates. Prabhu brought valuable insights to the table and took the time to mentor and handhold team members, guiding them whenever needed. He was our go-to person for everything related to mobile development as well as the broader application, and his reliability and expertise made a meaningful impact on our work.",
-      'QA Lead',
-      'Dsaas.ai',
-    ),
+
   ];
 
   @override
