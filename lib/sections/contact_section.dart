@@ -159,7 +159,7 @@ class _ContactSectionState extends State<ContactSection> {
                 child: TextField(
                   controller: _emailCtrl,
                   style: GoogleFonts.inter(color: Colors.white, fontSize: 13.5),
-                  decoration: _decoration('Your Email'),
+                  decoration: _decoration('Your Emaill'),
                 ),
               ),
             ],
