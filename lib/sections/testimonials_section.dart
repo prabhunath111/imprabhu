@@ -25,6 +25,11 @@ class _TestimonialsSectionState extends State<TestimonialsSection> {
 
   static const _items = [
     _Testimonial(
+      "I had the pleasure of working with Prabhu for over two years, and he is one of the most reliable and talented mobile developers I have worked with. \n He is outstanding performer who is deeply committed to his work. Always proactive, Prabhu brings clarity even in the middle of chaos and takes the lead in driving priorities forward.\n Building our mobile app came with its share of challenges and shifting directions,but thanks to his ownership and consistency, we were always in a production ready state and aligned closely with the web experience, even when mobile was not the primary focus.\n Beyond his technical strengths, Prabhu is highly empathetic and a great team player. He genuinely cares about his teammates and contributes positively to the team's culture. He would be a valuable addition to any team, and I highly recommend him",
+      'Senior Product Manager',
+      'Dsaas.ai',
+    ),
+    _Testimonial(
       'Prabhu is an exceptional engineer who consistently delivers high-quality '
       'solutions with clean code and great attention to detail.',
       'Product Manager',
