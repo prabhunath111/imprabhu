@@ -33,9 +33,20 @@ class _ContactSectionState extends State<ContactSection> {
   }
 
   Future<void> _send() async {
-    if (_nameCtrl.text.trim().isEmpty || _emailCtrl.text.trim().isEmpty || _messageCtrl.text.trim().isEmpty) {
+    final name = _nameCtrl.text.trim();
+    final email = _emailCtrl.text.trim();
+    final message = _messageCtrl.text.trim();
+
+    final emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+
+    if (name.isEmpty || email.isEmpty || message.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Please fill in all fields before sending.')),
+      );
+      return;
+    } else if (!emailRegex.hasMatch(email)) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please enter a valid email address.')),
       );
       return;
     }
@@ -158,6 +169,7 @@ class _ContactSectionState extends State<ContactSection> {
               Expanded(
                 child: TextField(
                   controller: _emailCtrl,
+                  keyboardType: TextInputType.emailAddress,
                   style: GoogleFonts.inter(color: Colors.white, fontSize: 13.5),
                   decoration: _decoration('Your Emaill'),
                 ),
