@@ -34,7 +34,7 @@ class AboutSection extends StatelessWidget {
         RevealOnScroll(
           delay: const Duration(milliseconds: 140),
           child: Text(
-            "I'm a Senior Flutter Engineer with 6+ years of experience in "
+            "I'm a Associate Lead Software Engineer with 7+ years of experience in "
             'building cross-platform mobile and web applications. I specialize '
             'in clean architecture, state management, and delivering exceptional '
             'user experiences.',
