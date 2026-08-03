@@ -114,7 +114,7 @@ class _TestimonialsSectionState extends State<TestimonialsSection> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(const Duration(seconds: 5), (_) {
+    _timer = Timer.periodic(const Duration(seconds: 55), (_) {
       if (!mounted) return;
       final next = (_page + 1) % _items.length;
       _controller.animateToPage(
@@ -177,14 +177,15 @@ class _TestimonialsSectionState extends State<TestimonialsSection> {
                       border: Border.all(color: AppColors.border),
                     ),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: .start,
+                      mainAxisAlignment: .center,
+                      mainAxisSize: .min,
                       children: [
                         Icon(Icons.format_quote_rounded, color: AppColors.primary.withValues(alpha: 0.5), size: 28),
                         const SizedBox(height: 10),
                         Text(
                           t.quote,
-                          maxLines: mobile ? 8 : 3,
+                          maxLines: mobile ? 4 : 3,
                           overflow: TextOverflow.ellipsis,
                           style: AppText.body.copyWith(
                             fontSize: 15,
