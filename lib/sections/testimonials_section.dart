@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -114,7 +115,7 @@ class _TestimonialsSectionState extends State<TestimonialsSection> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(const Duration(seconds: 55), (_) {
+    _timer = Timer.periodic(const Duration(seconds: (!kDebugMode)? 5: 55), (_) {
       if (!mounted) return;
       final next = (_page + 1) % _items.length;
       _controller.animateToPage(

@@ -167,7 +167,8 @@ class _MobileMenuButton extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
                   child: Column(
-                    mainAxisSize: MainAxisSize.min,
+                    mainAxisSize: .min,
+                    crossAxisAlignment: .start,
                     children: [
                       for (final item in items)
                         ListTile(
@@ -181,16 +182,13 @@ class _MobileMenuButton extends StatelessWidget {
                           },
                         ),
                       const SizedBox(height: 8),
-                      SizedBox(
-                        width: double.infinity,
-                        child: AppButton(
-                          label: 'Download Resume',
-                          icon: Icons.download_rounded,
-                          onPressed: () {
-                            Navigator.pop(ctx);
-                            onDownloadResume();
-                          },
-                        ),
+                      AppButton(
+                        label: 'Download Resume',
+                        icon: Icons.download_rounded,
+                        onPressed: () {
+                          Navigator.pop(ctx);
+                          onDownloadResume();
+                        },
                       ),
                     ],
                   ),
