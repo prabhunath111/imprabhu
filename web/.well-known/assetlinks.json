@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.simplifyvmsapp.mobile",
+      "package_name": "package_name_add_karunga",
       "sha256_cert_fingerprints": [
         "6E:AB:99:36:50:EF:2D:D0:61:41:4B:8C:DF:48:5C:A9:6A:2D:1A:82:4A:4B:55:A7:1F:21:65:5F:D3:71:67:8A",
         "F4:FB:2D:66:F3:49:94:E0:FE:2F:41:A3:96:87:85:F3:EA:3E:45:C4:62:26:FA:B7:C8:D9:B3:33:2A:B3:63:94",
