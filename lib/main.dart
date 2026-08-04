@@ -37,7 +37,7 @@ class PortfolioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Prabhu Nath Tiwary — Associate Lead Software Engineer',
+      title: 'Prabhu Nath Tiwary - Associate Lead Software Engineer',
       debugShowCheckedModeBanner: false,
       scrollBehavior: AppScrollBehavior(),
       theme: ThemeData.dark().copyWith(
