@@ -1,0 +1,16 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.simplifyvmsapp.mobile",
+      "sha256_cert_fingerprints": [
+        "6E:AB:99:36:50:EF:2D:D0:61:41:4B:8C:DF:48:5C:A9:6A:2D:1A:82:4A:4B:55:A7:1F:21:65:5F:D3:71:67:8A",
+        "F4:FB:2D:66:F3:49:94:E0:FE:2F:41:A3:96:87:85:F3:EA:3E:45:C4:62:26:FA:B7:C8:D9:B3:33:2A:B3:63:94",
+        "C3:83:31:95:2E:B7:6C:13:CF:29:82:CA:7B:C3:F3:65:CE:85:59:96:BC:C5:0E:8D:C1:1B:CE:6E:1E:0E:49:D9",
+        "D9:66:1D:21:D1:96:75:6F:8A:1B:E9:F0:FC:F2:7F:E0:70:B9:EE:DF:BB:49:14:C8:30:D8:04:A6:DD:85:D9:E3",
+        "53:4A:E9:B1:6D:3E:E0:A7:E5:8A:B8:45:8F:23:1E:A6:19:DD:41:2A:29:49:7E:DD:47:A5:58:0B:C7:DB:FC:90"
+      ]
+    }
+  }
+]

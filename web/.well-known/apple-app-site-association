@@ -1,0 +1,22 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "4392AVQKHC.com.simplifyvmsapp.mobile"
+        ],
+        "components": [
+          {
+            "/": "*"
+          },
+          {
+            "/": "/privacy",
+            "exclude": true,
+            "comment": "Exclude this exact path"
+          }
+        ]
+      }
+    ]
+  }
+}
