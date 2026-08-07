@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../theme/app_theme.dart';
+import 'package:intl/intl.dart';
 
 /// A stylized phone frame containing a tiny "app dashboard" mockup.
 /// Two variants are used side by side in the hero, mirroring the reference
@@ -62,7 +63,9 @@ class _StatusBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('9:41',
+        // Text('9:41',
+        // Text(DateFormat('HH:mm').format(DateTime.now().toLocal()),
+        Text(DateFormat('HH:mm').format(DateTime.now().toLocal()),
             style: GoogleFonts.inter(
                 color: Colors.white, fontSize: width * 0.045, fontWeight: FontWeight.w600)),
         Row(
@@ -90,7 +93,7 @@ class _GreetingScreen extends StatelessWidget {
       children: [
         _StatusBar(width: width),
         SizedBox(height: width * 0.09),
-        Text('Good Morning 👋',
+        Text('$getGreeting 👋',
             style: GoogleFonts.inter(color: AppColors.textMuted, fontSize: width * 0.045)),
         SizedBox(height: width * 0.015),
         Text('Prabhu',
@@ -375,4 +378,18 @@ class _MiniSparklinePainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+
+String get getGreeting {
+  final hour = DateTime.now().toLocal().hour;
+
+  if (hour < 12) {
+    return 'Good Morning';
+  } else if (hour < 17) {
+    return 'Good Afternoon';
+  } /*else if (hour < 21) {
+    return 'Good Evening';
+  } */else {
+    return 'Good Evening';
+  }
 }
