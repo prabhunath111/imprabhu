@@ -4,9 +4,9 @@
     "build_asset_types": [],
     "linking_enabled": false
   },
-  "out_dir_shared": "/Users/prabhu.tiwary/StudioProjects/prabhu_portfolio/.dart_tool/hooks_runner/shared/objective_c/build/",
-  "out_file": "/Users/prabhu.tiwary/StudioProjects/prabhu_portfolio/.dart_tool/hooks_runner/objective_c/337ce265dc/output.json",
+  "out_dir_shared": "C:\\Users\\ursan\\flutterprojects\\imprabhu\\.dart_tool\\hooks_runner\\shared\\objective_c\\build\\",
+  "out_file": "C:\\Users\\ursan\\flutterprojects\\imprabhu\\.dart_tool\\hooks_runner\\objective_c\\337ce265dc\\output.json",
   "package_name": "objective_c",
-  "package_root": "/Users/prabhu.tiwary/.pub-cache/hosted/pub.dev/objective_c-9.4.1/",
+  "package_root": "C:\\Users\\ursan\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\objective_c-9.4.1\\",
   "user_defines": {}
 }

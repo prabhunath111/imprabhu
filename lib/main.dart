@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                         AchievementsSection(key: _achievementsKey),
                         const TestimonialsSection(),
                         ContactSection(key: _contactKey),
-                        const FooterSection(),
+                        // const FooterSection(),
                       ],
                     ),
                   ),
