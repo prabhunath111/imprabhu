@@ -1,7 +1,10 @@
-{"applinks":{"apps":[],"details":[
 {
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
         "appIDs": [
-          "4392AVQ.com.psimplifyvmsapp.mobile"
+          "4392AVQKHC.com.simplifyvmsapp.mobile"
         ],
         "components": [
           {
@@ -14,4 +17,6 @@
           }
         ]
       }
-]}}
+    ]
+  }
+}
