@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31a8cbf7-76de-4b4a-b77e-c68993044cee" name="Changes" comment="Add Android App Links and iOS Universal Links configuration&#10;&#10;Deep linking web configurations (deep link json)" />
+    <list default="true" id="31a8cbf7-76de-4b4a-b77e-c68993044cee" name="Changes" comment="Update iOS App ID in apple-app-site-association" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785866183365</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Update iOS App ID in apple-app-site-association">
+      <option name="closed" value="true" />
+      <created>1786641712498</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1786641712498</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -259,6 +267,7 @@
     <MESSAGE value="Update job title, meta description, and HTML language attribute in index.html" />
     <MESSAGE value="Update job title and years of experience in about section" />
     <MESSAGE value="Add Android App Links and iOS Universal Links configuration&#10;&#10;Deep linking web configurations (deep link json)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Android App Links and iOS Universal Links configuration&#10;&#10;Deep linking web configurations (deep link json)" />
+    <MESSAGE value="Update iOS App ID in apple-app-site-association" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update iOS App ID in apple-app-site-association" />
   </component>
 </project>
