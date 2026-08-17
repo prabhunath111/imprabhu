@@ -17,6 +17,8 @@ class SkillsSection extends StatelessWidget {
     _Skill(Icons.merge_type_rounded, Color(0xFFF05033), 'Git'),
     _Skill(Icons.developer_board_rounded, Color(0xFF2496ED), 'Docker'),
     _Skill(Icons.code_rounded, Color(0xFF6D5DF4), 'CI/CD'),
+    _Skill(Icons.flight, Color(0xFFFF5722), 'Shorebird'), 
+
   ];
 
   @override
