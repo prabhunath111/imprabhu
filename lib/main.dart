@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
             AppNavBar(
               items: _navItems,
               // Replace this URL with a real hosted resume PDF link.
-              onDownloadResume: () => _openUrl('https://example.com/prabhu-tiwary-resume.pdf'),
+              onDownloadResume: () => _openUrl('https://drive.google.com/file/d/1sdzqRDQ2rpyK79-c8Usv_HalLdRNReSs/view?usp=drive_link'),
             ),
             Expanded(
               child: ScrollRevealScope(
