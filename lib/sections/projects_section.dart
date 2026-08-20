@@ -58,6 +58,16 @@ class ProjectsSection extends StatelessWidget {
       liveDemoUrl: 'https://example.com/chat-app-demo',
       githubUrl: 'https://github.com/prabhu-tiwary',
     ),
+    ProjectData(
+      title: 'entoo Hero',
+      icon: Icons.electric_bike_rounded,
+      color: AppColors.secondary,
+      description:
+          "Mobile app to help our riders to find nearby charging point for Electric Vehicle.",
+      tags: ['Flutter', 'Firebase', 'GetX'],
+      liveDemoUrl: 'https://play.google.com/store/apps/details?id=com.lighting.micellio.llcaptain&hl=en_IN',
+      githubUrl: 'https://github.com/prabhu-tiwary',
+    ),
   ];
 
   Future<void> _open(String url) async {
