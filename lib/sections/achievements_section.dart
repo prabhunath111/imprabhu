@@ -21,15 +21,18 @@ class AchievementsSection extends StatelessWidget {
       StatCard(
         icon: Icons.star_rounded,
         iconColor: AppColors.warning,
-        value: '4.8 ★',
-        label: 'Average Play Store',
+        // value: '4.8 ★',
+        // value: '🤖/ ',
+        value: "Hybrid",
+        label: 'Android/iOS/Web',
         width: mobile ? (width - 40 - 14) / 2 : 210,
       ),
       StatCard(
         icon: Icons.trending_up_rounded,
         iconColor: AppColors.success,
-        value: '40%',
-        label: 'Performance Improvement',
+        value: '80%',
+        // label: 'Performance Improvement',
+        label: 'Performance Impr...',
         width: mobile ? (width - 40 - 14) / 2 : 210,
       ),
       StatCard(
