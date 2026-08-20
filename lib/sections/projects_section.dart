@@ -61,7 +61,7 @@ class ProjectsSection extends StatelessWidget {
     ProjectData(
       title: 'entoo Hero',
       icon: Icons.electric_bike_rounded,
-      color: AppColors.secondary,
+      color: Colors.greenAccent,
       description:
           "Mobile app to help our riders to find nearby charging point for Electric Vehicle.",
       tags: ['Flutter', 'Firebase', 'GetX'],
@@ -70,13 +70,20 @@ class ProjectsSection extends StatelessWidget {
     ),
     ProjectData(
       title: 'Lightning 360',
-      icon: Icons.electric_bike_rounded,
-      color: AppColors.secondary,
+      icon: Icons.task_outlined,
+      color: Colors.orangeAccent,
       description:
-          '''Mobile app for our
-            employee to track there tasks, Support Indian Local language to
-            speak and convert into text and also translate into English so
-            assignee user can be able to see in both language''',
+          "Mobile app for our employee to track there tasks, Support Indian Local language to speak and convert into text and also translate into English so assignee user can be able to see in both language",
+      tags: ['Flutter', 'Firebase', 'GetX'],
+      liveDemoUrl: 'https://play.google.com/store/apps/details?id=in.lightninglogistics.lltask&hl=en_IN',
+      githubUrl: 'https://github.com/prabhu-tiwary',
+    ),
+    ProjectData(
+      title: 'LL CCTV',
+      icon: Icons.video_camera_back_outlined,
+      color: AppColors.accent,//Colors.blueAccent,
+      description:
+          "Mobile app for our employee to track there tasks, Support Indian Local language to speak and convert into text and also translate into English so assignee user can be able to see in both language",
       tags: ['Flutter', 'Firebase', 'GetX'],
       liveDemoUrl: 'https://play.google.com/store/apps/details?id=in.lightninglogistics.lltask&hl=en_IN',
       githubUrl: 'https://github.com/prabhu-tiwary',
