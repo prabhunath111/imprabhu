@@ -85,7 +85,7 @@ class ProjectsSection extends StatelessWidget {
       description:
           "Mobile app for our employee to track there tasks, Support Indian Local language to speak and convert into text and also translate into English so assignee user can be able to see in both language",
       tags: ['Flutter', 'Firebase', 'GetX'],
-      liveDemoUrl: 'https://play.google.com/store/apps/details?id=in.lightninglogistics.lltask&hl=en_IN',
+      liveDemoUrl: 'https://play.google.com/store/apps/details?id=in.lightningglogisticss.lltask&hl=en_IN',
       githubUrl: 'https://github.com/prabhu-tiwary',
     ),
   ];
@@ -218,7 +218,7 @@ class _ProjectCard extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text('Live Demo',
+                      Text('Play Store',
                           style: GoogleFonts.inter(
                               color: AppColors.secondary, fontSize: 12.5, fontWeight: FontWeight.w600)),
                       const SizedBox(width: 4),
@@ -226,7 +226,7 @@ class _ProjectCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(width: 20),
+                /*const SizedBox(width: 20),
                 InkWell(
                   onTap: () => onOpenGithub(project.githubUrl),
                   child: Row(
@@ -239,7 +239,7 @@ class _ProjectCard extends StatelessWidget {
                       const Icon(Icons.code_rounded, size: 13, color: AppColors.textSecondary),
                     ],
                   ),
-                ),
+                ),*/
               ],
             ),
           ],
