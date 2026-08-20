@@ -68,6 +68,19 @@ class ProjectsSection extends StatelessWidget {
       liveDemoUrl: 'https://play.google.com/store/apps/details?id=com.lighting.micellio.llcaptain&hl=en_IN',
       githubUrl: 'https://github.com/prabhu-tiwary',
     ),
+    ProjectData(
+      title: 'Lightning 360',
+      icon: Icons.electric_bike_rounded,
+      color: AppColors.secondary,
+      description:
+          '''Mobile app for our
+            employee to track there tasks, Support Indian Local language to
+            speak and convert into text and also translate into English so
+            assignee user can be able to see in both language''',
+      tags: ['Flutter', 'Firebase', 'GetX'],
+      liveDemoUrl: 'https://play.google.com/store/apps/details?id=in.lightninglogistics.lltask&hl=en_IN',
+      githubUrl: 'https://github.com/prabhu-tiwary',
+    ),
   ];
 
   Future<void> _open(String url) async {
