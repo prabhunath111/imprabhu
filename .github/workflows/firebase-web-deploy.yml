@@ -32,4 +32,4 @@ jobs:
         env:
 #          NODE_OPTIONS: "--max-old-space-size=8192"
           NODE_OPTIONS: "--max-old-space-size=1024"
-        run: firebase deploy --only hosting --project imprabhu--token ${{ secrets.FIREBASE_TOKEN }}
+        run: firebase deploy --only hosting --project imprabhu --token ${{ secrets.FIREBASE_TOKEN }}
