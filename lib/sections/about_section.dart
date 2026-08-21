@@ -43,7 +43,7 @@ class AboutSection extends StatelessWidget {
             style: AppText.body.copyWith(fontSize: 15.5),
           ),*/
           child: Text(
-            "I'm an Associate Lead Software Engineer with 6+ years of experience building scalable, high-quality cross-platform applications using Flutter and Dart. I specialize in mobile and web development, with a focus on clean architecture, state management, performance, and maintainable code. I've contributed to and led applications across Android, iOS, and the web, taking ownership from architecture and development to testing, deployment, and production support. I enjoy solving complex technical challenges, mentoring developers, and building products that create real value.",
+            "I'm an Associate Lead Software Engineer with 7+ years of experience building scalable, high-quality cross-platform applications using Flutter and Dart. I specialize in mobile and web development, with a focus on clean architecture, state management, performance, and maintainable code. I've contributed to and led applications across Android, iOS, and the web, taking ownership from architecture and development to testing, deployment, and production support. I enjoy solving complex technical challenges, mentoring developers, and building products that create real value.",
             style: AppText.body.copyWith(fontSize: 15.5),
           ),
         ),
