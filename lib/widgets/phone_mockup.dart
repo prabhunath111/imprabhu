@@ -63,11 +63,19 @@ class _StatusBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        // Text('9:41',
-        // Text(DateFormat('HH:mm').format(DateTime.now().toLocal()),
-        Text(DateFormat('HH:mm').format(DateTime.now().toLocal()),
+        /*Text(DateFormat('HH:mm').format(DateTime.now().toLocal()),
             style: GoogleFonts.inter(
-                color: Colors.white, fontSize: width * 0.045, fontWeight: FontWeight.w600)),
+                color: Colors.white, fontSize: width * 0.045, fontWeight: FontWeight.w600)),*/
+        StreamBuilder(
+          stream: Stream.periodic(const Duration(seconds: 1)),
+          builder: (context, snapshot) {
+            return Text(
+              DateFormat('HH:mm').format(DateTime.now().toLocal()),
+              style: GoogleFonts.inter(
+                  color: Colors.white, fontSize: width * 0.045, fontWeight: FontWeight.w600),
+            );
+          },
+        ),
         Row(
           children: [
             Icon(Icons.signal_cellular_alt, color: Colors.white, size: width * 0.05),
