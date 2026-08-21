@@ -10,12 +10,13 @@ class AboutSection extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final mobile = isMobile(width);
 
-    const stats = [
-      _StatData(Icons.calendar_month_rounded, AppColors.primary, '7+', 'Years Experience'),
-      _StatData(Icons.rocket_launch_rounded, AppColors.secondary, '10+', 'Apps Deployed'),
-      _StatData(Icons.verified_rounded, AppColors.accent, '100%', 'Client Satisfaction'),
-      _StatData(Icons.play_arrow_rounded, AppColors.success, '10+', 'Apps on Play Store'),
-      _StatData(Icons.apple_rounded, AppColors.warning, '10+', 'Apps on App Store'),
+    final stats = [
+      const _StatData(Icons.calendar_month_rounded, AppColors.primary, '7+', 'Years Exp•'),
+      const _StatData(Icons.rocket_launch_rounded, AppColors.secondary, '10+', 'Apps Deployed'),
+      const _StatData(Icons.devices, AppColors.success, '0 - 🚀', 'Android • iOS • Web'),
+      const _StatData(Icons.play_arrow_rounded, AppColors.success, '20+', 'Mentored Dev'),
+      // _StatData(Icons.language, AppColors.success, '0 - 🚀', 'Android • iOS • Web'),
+      // _StatData(Icons.apple_rounded, AppColors.warning, '10+', 'Apps on App Store'),
     ];
 
     final textColumn = Column(
