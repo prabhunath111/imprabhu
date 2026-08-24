@@ -13,7 +13,7 @@ class AboutSection extends StatelessWidget {
     final stats = [
       const _StatData(Icons.calendar_month_rounded, AppColors.primary, '7+', 'Years of Exp.'),
       const _StatData(Icons.rocket_launch_rounded, AppColors.secondary, '10+', 'Apps Deployed'),
-      const _StatData(Icons.devices, AppColors.success, '3 Platforms', 'Android • iOS • Web'),
+      const _StatData(Icons.devices, AppColors.success, '3+', 'Android • iOS • Web'),
       const _StatData(Icons.play_arrow_rounded, AppColors.success, '20+', 'Devs Mentored'),
       // _StatData(Icons.language, AppColors.success, '0 - 🚀', 'Android • iOS • Web'),
       // _StatData(Icons.apple_rounded, AppColors.warning, '10+', 'Apps on App Store'),

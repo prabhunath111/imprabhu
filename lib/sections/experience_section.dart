@@ -7,10 +7,10 @@ class _Job {
   final String period;
   final String title;
   final String company;
-  final String description;
+  final List<String> points;
   final IconData icon;
   final bool current;
-  const _Job(this.period, this.title, this.company, this.description, this.icon, {this.current = false});
+  const _Job(this.period, this.title, this.company, this.points, this.icon, {this.current = false});
 }
 
 class ExperienceSection extends StatelessWidget {
@@ -18,20 +18,24 @@ class ExperienceSection extends StatelessWidget {
 
   static const _jobs = [
     _Job('Jan 2026 - Present', 'Associate Lead Software Engineer', 'Simplify',
-        'Leading Flutter development and building scalable, enterprise-grade applications that deliver real-world impact.',
+        ['Leading Flutter development for scalable, enterprise-grade applications across Android, iOS, and web', 'Driving technical decisions, application architecture, code quality, and maintainable engineering practices', 'Mentoring developers and supporting the team in delivering reliable, high-quality products'],
         Icons.workspace_premium_rounded,
         current: true),
     _Job('Feb 2024 - Dec 2025', 'Senior Software Engineer', 'Simplify',
-        'Developed multiple cross-platform apps and contributed to architecture and performance improvements.',
-        Icons.workspace_premium_rounded, current: true),
+        ['Led the development and delivery of multiple cross-platform applications from architecture and development to deployment and production support', 'Improved application performance, maintainability, and code quality through better architecture and engineering practices', 'Took ownership of key features and releases across Android, iOS, and web'],
+        Icons.workspace_premium_rounded, current: false),
     _Job('Jun 2022 - Jan 2024', 'Software Engineer', 'Simplify',
-        'Built and maintained Flutter applications for clients across different domains.',
+        ['Built and maintained Flutter applications for multiple products and business domains', 'Developed features, integrated APIs, created reusable components, and resolved production issues', 'Contributed to application releases and the continuous improvement of the codebase'],
         Icons.code_rounded),
     _Job('Mar 2021 - Jun 2022', 'Software Engineer', 'LightningLogistics/Micelio',
-        'Built and maintained Flutter applications for clients across different domains.',
+        ['Developed and maintained cross-platform Flutter applications for business and logistics-related use cases',
+          'Integrated backend APIs and collaborated with cross-functional teams to deliver new features',
+          'Supported applications throughout development, testing, release, and maintenance'],
         Icons.code_rounded),
     _Job('Jul 2019 - Feb 2021', 'Software Engineer', 'Aponiar Solutions',
-        'Built and maintained Flutter applications for clients across different domains.',
+        ['Built Flutter applications and developed a strong foundation in cross-platform mobile development',
+          'Worked on UI development, API integration, and reusable application components',
+          'Contributed to feature development, bug fixing, and application maintenance'],
         Icons.bolt_rounded),
   ];
 
@@ -131,7 +135,29 @@ class _TimelineTile extends StatelessWidget {
                         style: GoogleFonts.inter(
                             color: AppColors.secondary, fontSize: 13.5, fontWeight: FontWeight.w600)),
                     const SizedBox(height: 10),
-                    Text(job.description, style: AppText.body.copyWith(fontSize: 13.5)),
+                    Column(
+                      children: job.points.map((point) => Padding(
+                        padding: const EdgeInsets.only(bottom: 6),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 6, right: 10),
+                              child: Container(
+                                width: 5,
+                                height: 5,
+                                decoration: const BoxDecoration(color: AppColors.secondary, shape: BoxShape.circle),
+                              ),
+                            ),
+                            Expanded(
+                              child: Text(point,
+                                  style: AppText.body.copyWith(fontSize: 13),
+                                  softWrap: true),
+                            ),
+                          ],
+                        ),
+                      )).toList(),
+                    ),
                   ],
                 ),
               ),
