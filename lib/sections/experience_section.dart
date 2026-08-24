@@ -18,7 +18,7 @@ class ExperienceSection extends StatelessWidget {
 
   static const _jobs = [
     _Job('Jan 2026 - Present', 'Associate Lead Software Engineer', 'Simplify',
-        'Leading Flutter development and building scalable enterprise applications used by thousands of users.',
+        'Leading Flutter development and building scalable, enterprise-grade applications that deliver real-world impact.',
         Icons.workspace_premium_rounded,
         current: true),
     _Job('Feb 2024 - Dec 2025', 'Senior Software Engineer', 'Simplify',
