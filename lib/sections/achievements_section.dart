@@ -12,14 +12,16 @@ class AchievementsSection extends StatelessWidget {
 
     final achievements = [
       StatCard(
-        icon: Icons.emoji_events_rounded,
+        // icon: Icons.emoji_events_rounded,
+        icon: Icons.workspace_premium_outlined,
         iconColor: AppColors.warning,
         value: '10+',
         label: 'Apps Published',
         width: mobile ? (width - 40 - 14) / 2 : 210,
       ),
       StatCard(
-        icon: Icons.star_rounded,
+        // icon: Icons.star_rounded,
+        icon: Icons.devices_other_outlined,
         iconColor: AppColors.warning,
         value: "3 Platforms ",
         label: "Android•iOS•Web",
@@ -27,31 +29,32 @@ class AchievementsSection extends StatelessWidget {
         width: mobile ? (width - 40 - 14) / 2 : 210,
       ),
       StatCard(
-        icon: Icons.settings,
+        icon: Icons.rocket_launch_outlined,
         iconColor: AppColors.success,
         value: 'CI/CD',
-        label: 'Automated Deploy',
+        label: 'Auto Deploy',
         width: mobile ? (width - 40 - 14) / 2 : 210,
       ),
       StatCard(
-        icon: Icons.integration_instructions_rounded,
+        icon: Icons.system_update_alt_outlined,
         iconColor: AppColors.secondary,
         value: 'OTA',
         label: 'Hotfix Delivery',
         width: mobile ? (width - 40 - 14) / 2 : 210,
       ),
       StatCard(
-        icon: Icons.groups_rounded,
+        icon: Icons.groups_outlined,
         iconColor: AppColors.primary,
         value: '20+',
         label: 'Devs Mentored',
         width: mobile ? (width - 40 - 14) : 210,
       ),
       StatCard(
-        icon: Icons.groups_rounded,
+        // icon: Icons.groups_rounded,
+        icon: Icons.account_tree_outlined,
         iconColor: AppColors.primary,
         value: 'E2E',
-        label: 'Dev to Delivery',
+        label: 'Build to Production',
         width: mobile ? (width - 40 - 14) : 210,
       ),
     ];
