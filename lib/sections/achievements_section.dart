@@ -21,18 +21,16 @@ class AchievementsSection extends StatelessWidget {
       StatCard(
         icon: Icons.star_rounded,
         iconColor: AppColors.warning,
-        // value: '4.8 ★',
-        // value: '🤖/ ',
         value: "3 Platforms ",
-        label: "Android • iOS • Web",
+        label: "Android•iOS•Web",
+        // label: "Android • iOS • Web",
         width: mobile ? (width - 40 - 14) / 2 : 210,
       ),
       StatCard(
         icon: Icons.settings,
         iconColor: AppColors.success,
         value: 'CI/CD',
-        // label: 'Performance Improvement',
-        label: 'Build and Release Automation',
+        label: 'Automated Deploy',
         width: mobile ? (width - 40 - 14) / 2 : 210,
       ),
       StatCard(
@@ -53,7 +51,7 @@ class AchievementsSection extends StatelessWidget {
         icon: Icons.groups_rounded,
         iconColor: AppColors.primary,
         value: 'E2E',
-        label: 'Development to Production',
+        label: 'Dev to Delivery',
         width: mobile ? (width - 40 - 14) : 210,
       ),
     ];
