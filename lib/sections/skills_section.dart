@@ -21,7 +21,8 @@ class SkillsSection extends StatelessWidget {
     _Skill(Icons.flight, Color(0xFFFF5722), 'Shorebird'), 
     _Skill(Icons.animation, Color(0xFF2496ED), 'Animation'),
     _Skill(Icons.architecture_rounded, Color(0xFF607D8B), 'Architecture'),
-    _Skill(Icons.analytics, Color(0xFF607D8B), 'Firebase Analytics'),
+    _Skill(Icons.analytics, Color(0xFF607D8B), 'Analytics'),
+    _Skill(Icons.bug_report, Color(0xFFFFCA28), 'Crashlytics'),
 
   ];
 
