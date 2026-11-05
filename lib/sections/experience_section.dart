@@ -67,104 +67,154 @@ class _TimelineTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final mobile = isMobile(width);
+    final iconSize = mobile ? 34.0 : 40.0;
+    final spacing = mobile ? 12.0 : 20.0;
 
-    return IntrinsicHeight(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
+    return Stack(
+      children: [
+        if (!isLast)
+          Positioned(
+            top: iconSize,
+            bottom: 0,
+            left: (iconSize / 2) - 1,
+            child: Container(
+              width: 2,
+              color: AppColors.border,
+            ),
+          ),
+        Padding(
+          padding: EdgeInsets.only(bottom: isLast ? 0 : (mobile ? 20 : 32)),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                width: 40,
-                height: 40,
+                width: iconSize,
+                height: iconSize,
                 decoration: BoxDecoration(
                   gradient: job.current ? AppColors.primaryGradient : null,
                   color: job.current ? null : AppColors.surfaceLight,
                   shape: BoxShape.circle,
-                  border: Border.all(color: job.current ? Colors.transparent : AppColors.border),
+                  border: Border.all(
+                    color: job.current ? Colors.transparent : AppColors.border,
+                  ),
                 ),
-                child: Icon(job.icon, size: 18, color: job.current ? Colors.white : AppColors.textSecondary),
+                child: Icon(
+                  job.icon,
+                  size: mobile ? 16 : 18,
+                  color: job.current ? Colors.white : AppColors.textSecondary,
+                ),
               ),
-              if (!isLast)
-                Expanded(
-                  child: Container(width: 2, color: AppColors.border, margin: const EdgeInsets.symmetric(vertical: 6)),
-                ),
-            ],
-          ),
-          const SizedBox(width: 20),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(bottom: isLast ? 0 : 32),
-              child: Container(
-                padding: const EdgeInsets.all(18),
-                decoration: BoxDecoration(
-                  color: AppColors.surface,
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(color: AppColors.border),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Wrap(
-                      spacing: 10,
-                      runSpacing: 6,
-                      crossAxisAlignment: WrapCrossAlignment.center,
-                      children: [
-                        Text(job.period,
+              SizedBox(width: spacing),
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.all(mobile ? 14 : 18),
+                  decoration: BoxDecoration(
+                    color: AppColors.surface,
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: AppColors.border),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 6,
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        children: [
+                          Text(
+                            job.period,
                             style: GoogleFonts.inter(
-                                color: AppColors.textMuted, fontSize: 12.5, fontWeight: FontWeight.w600)),
-                        if (job.current)
-                          Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                            decoration: BoxDecoration(
-                              color: AppColors.success.withValues(alpha: 0.15),
-                              borderRadius: BorderRadius.circular(20),
+                              color: AppColors.textMuted,
+                              fontSize: mobile ? 11.5 : 12.5,
+                              fontWeight: FontWeight.w600,
                             ),
-                            child: Text('Current',
-                                style: GoogleFonts.inter(
-                                    color: AppColors.success, fontSize: 10.5, fontWeight: FontWeight.w700)),
                           ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    Text(job.title,
-                        style: GoogleFonts.spaceGrotesk(
-                            color: AppColors.textPrimary, fontSize: mobile ? 16 : 18, fontWeight: FontWeight.w700)),
-                    const SizedBox(height: 4),
-                    Text(job.company,
-                        style: GoogleFonts.inter(
-                            color: AppColors.secondary, fontSize: 13.5, fontWeight: FontWeight.w600)),
-                    const SizedBox(height: 10),
-                    Column(
-                      children: job.points.map((point) => Padding(
-                        padding: const EdgeInsets.only(bottom: 6),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 6, right: 10),
-                              child: Container(
-                                width: 5,
-                                height: 5,
-                                decoration: const BoxDecoration(color: AppColors.secondary, shape: BoxShape.circle),
+                          if (job.current)
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 3,
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppColors.success.withValues(alpha: 0.15),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Text(
+                                'Current',
+                                style: GoogleFonts.inter(
+                                  color: AppColors.success,
+                                  fontSize: 10.5,
+                                  fontWeight: FontWeight.w700,
+                                ),
                               ),
                             ),
-                            Expanded(
-                              child: Text(point,
-                                  style: AppText.body.copyWith(fontSize: 13),
-                                  softWrap: true),
-                            ),
-                          ],
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        job.title,
+                        style: GoogleFonts.spaceGrotesk(
+                          color: AppColors.textPrimary,
+                          fontSize: mobile ? 15.5 : 18,
+                          fontWeight: FontWeight.w700,
                         ),
-                      )).toList(),
-                    ),
-                  ],
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        job.company,
+                        style: GoogleFonts.inter(
+                          color: AppColors.secondary,
+                          fontSize: mobile ? 12.5 : 13.5,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: job.points
+                            .map((point) => Padding(
+                                  padding: const EdgeInsets.only(bottom: 8),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                          top: 6,
+                                          right: 8,
+                                        ),
+                                        child: Container(
+                                          width: 5,
+                                          height: 5,
+                                          decoration: const BoxDecoration(
+                                            color: AppColors.secondary,
+                                            shape: BoxShape.circle,
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: Text(
+                                          point,
+                                          style: AppText.body.copyWith(
+                                            fontSize: mobile ? 12.5 : 13.5,
+                                            height: 1.4,
+                                          ),
+                                          softWrap: true,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ))
+                            .toList(),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
