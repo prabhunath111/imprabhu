@@ -106,11 +106,12 @@ class ProjectsSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const RevealOnScroll(child: SectionLabel('Featured Projects')),
-              RevealOnScroll(
+              RevealOnScroll(child: SectionLabel('Featured Projects')),
+              ///Todo: View All Projects hidden temporarily
+              /*RevealOnScroll(
                 delay: const Duration(milliseconds: 100),
                 child: TextButton.icon(
                   onPressed: () => _open('https://github.com/prabhunath111/repositories'),
@@ -120,7 +121,7 @@ class ProjectsSection extends StatelessWidget {
                     style: GoogleFonts.inter(color: AppColors.primary, fontWeight: FontWeight.w600, fontSize: 13),
                   ),
                 ),
-              ),
+              ),*/
             ],
           ),
           const SizedBox(height: 24),
