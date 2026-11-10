@@ -246,6 +246,7 @@ class AppButton extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14),
             child: Row(
               mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (icon != null) ...[
                   Icon(icon, size: 16, color: Colors.white),

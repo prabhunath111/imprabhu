@@ -159,37 +159,83 @@ class _MobileMenuButton extends StatelessWidget {
           showModalBottomSheet(
             context: context,
             backgroundColor: AppColors.surface,
+            isScrollControlled: true,
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
             ),
             builder: (ctx) {
+              final maxSheetHeight = MediaQuery.of(ctx).size.height * 0.85;
               return SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
+                child: Container(
+                  constraints: BoxConstraints(maxHeight: maxSheetHeight),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                   child: Column(
-                    mainAxisSize: .min,
-                    crossAxisAlignment: .start,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      for (final item in items)
-                        ListTile(
-                          title: Text(
-                            item.label,
-                            style: GoogleFonts.inter(color: Colors.white, fontWeight: FontWeight.w500),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Menu',
+                            style: GoogleFonts.spaceGrotesk(
+                              color: AppColors.textPrimary,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                            ),
                           ),
-                          onTap: () {
+                          IconButton(
+                            icon: const Icon(Icons.close_rounded, color: AppColors.textSecondary),
+                            onPressed: () => Navigator.pop(ctx),
+                          ),
+                        ],
+                      ),
+                      const Divider(color: AppColors.border, height: 16),
+                      Flexible(
+                        child: SingleChildScrollView(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              for (final item in items)
+                                ListTile(
+                                  contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                  title: Text(
+                                    item.label,
+                                    style: GoogleFonts.inter(
+                                      color: AppColors.textPrimary,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                  trailing: const Icon(
+                                    Icons.chevron_right_rounded,
+                                    color: AppColors.textMuted,
+                                    size: 18,
+                                  ),
+                                  onTap: () {
+                                    Navigator.pop(ctx);
+                                    Future.delayed(
+                                      const Duration(milliseconds: 200),
+                                      () => onSelect(item.sectionKey),
+                                    );
+                                  },
+                                ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      SizedBox(
+                        width: double.infinity,
+                        child: AppButton(
+                          label: 'Download Resume',
+                          icon: Icons.download_rounded,
+                          onPressed: () {
                             Navigator.pop(ctx);
-                            Future.delayed(const Duration(milliseconds: 200), () => onSelect(item.sectionKey));
+                            onDownloadResume();
                           },
                         ),
-                      const SizedBox(height: 8),
-                      AppButton(
-                        label: 'Download Resume',
-                        icon: Icons.download_rounded,
-                        onPressed: () {
-                          Navigator.pop(ctx);
-                          onDownloadResume();
-                        },
                       ),
+                      const SizedBox(height: 8),
                     ],
                   ),
                 ),
