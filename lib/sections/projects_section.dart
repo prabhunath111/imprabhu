@@ -12,6 +12,7 @@ class ProjectData {
   final List<String> tags;
   final String liveDemoUrl;
   final String githubUrl;
+  final String storeName;
 
   const ProjectData({
     required this.title,
@@ -21,6 +22,7 @@ class ProjectData {
     required this.tags,
     required this.liveDemoUrl,
     required this.githubUrl,
+    required this.storeName,
   });
 }
 
@@ -29,41 +31,13 @@ class ProjectsSection extends StatelessWidget {
 
   static const _projects = [
     ProjectData(
-      title: 'Healthcare Shift Management',
-      icon: Icons.medical_services_rounded,
-      color: AppColors.primary,
-      description:
-          'Cross-platform app for healthcare professionals to manage shifts, schedules and notifications.',
-      tags: ['Flutter', 'Firebase', 'GoRouter'],
-      liveDemoUrl: 'https://example.com/healthcare-demo',
-      githubUrl: 'https://github.com/prabhu-tiwary',
-    ),
-    ProjectData(
-      title: 'AI Recruitment Platform',
-      icon: Icons.psychology_alt_rounded,
-      color: AppColors.accent,
-      description:
-          'AI-powered recruitment platform with resume parsing, candidate matching and real-time analytics.',
-      tags: ['Flutter', 'Node.js', 'MongoDB'],
-      liveDemoUrl: 'https://example.com/ai-recruitment-demo',
-      githubUrl: 'https://github.com/prabhu-tiwary',
-    ),
-    ProjectData(
-      title: 'Chat Application',
-      icon: Icons.chat_bubble_rounded,
-      color: AppColors.secondary,
-      description:
-          'Real-time chat application with push notifications, image sharing and more.',
-      tags: ['Flutter', 'Firebase', 'GetX'],
-      liveDemoUrl: 'https://example.com/chat-app-demo',
-      githubUrl: 'https://github.com/prabhu-tiwary',
-    ),
-    ProjectData(
       title: 'entoo Hero',
       icon: Icons.electric_bike_rounded,
       color: Colors.greenAccent,
+      storeName: "Play Store",
       description:
-          "Mobile app to help our riders to find nearby charging point for Electric Vehicle.",
+      // "Mobile app to help our riders to find nearby charging point for Electric Vehicle.",
+      "A last-mile delivery partner application that enables delivery professionals to register, apply for jobs, complete onboarding, manage daily attendance, and access EV charging stations while delivering food, groceries, e-commerce, and other packages across 40+ cities in India.",
       tags: ['Flutter', 'Firebase', 'GetX'],
       liveDemoUrl: 'https://play.google.com/store/apps/details?id=com.lighting.micellio.llcaptain&hl=en_IN',
       githubUrl: 'https://github.com/prabhu-tiwary',
@@ -72,8 +46,10 @@ class ProjectsSection extends StatelessWidget {
       title: 'Lightning 360',
       icon: Icons.task_outlined,
       color: Colors.orangeAccent,
+      storeName: "Play Store",
       description:
-          "Mobile app for our employee to track there tasks, Support Indian Local language to speak and convert into text and also translate into English so assignee user can be able to see in both language",
+      // "Mobile app for our employee to track there tasks, Support Indian Local language to speak and convert into text and also translate into English so assignee user can be able to see in both language",
+      "An employee task and fleet management application that enables employees to manage daily tasks, track attendance, maintain work journals, deploy and manage rider assets, and resolve vehicle breakdown tickets. Supports multilingual task creation through text and voice.",
       tags: ['Flutter', 'Firebase', 'GetX'],
       liveDemoUrl: 'https://play.google.com/store/apps/details?id=in.lightninglogistics.lltask&hl=en_IN',
       githubUrl: 'https://github.com/prabhu-tiwary',
@@ -81,11 +57,56 @@ class ProjectsSection extends StatelessWidget {
     ProjectData(
       title: 'LL CCTV',
       icon: Icons.video_camera_back_outlined,
+      storeName: "Play Store",
       color: AppColors.accent,//Colors.blueAccent,
       description:
-          "Mobile app for our employee to track there tasks, Support Indian Local language to speak and convert into text and also translate into English so assignee user can be able to see in both language",
+      "Flutter application for periodic video recording and Wi-Fi-based uploads to AWS servers.",
       tags: ['Flutter', 'Firebase', 'GetX'],
-      liveDemoUrl: 'https://play.google.com/store/apps/details?id=in.lightningglogisticss.lltask&hl=en_IN',
+      liveDemoUrl: 'https://play.google.com/store/apps/details?id=in.lightningglogisticss.llcctv&hl=en_IN',
+      githubUrl: 'https://github.com/prabhu-tiwary',
+    ),
+    ProjectData(
+      title: 'SimplifyVMS',
+      icon: Icons.miscellaneous_services_outlined,
+      color: AppColors.secondary,
+      storeName: "App Store",
+      description:
+      'An AI-first, cloud-native vendor management platform that streamlines global contingent workforce management, direct sourcing, compliance, and end-to-end Statement of Work (SOW) lifecycle management through configurable enterprise solutions and intelligent automation.',
+      tags: ['Flutter', 'Firebase', 'GetX'],
+      liveDemoUrl: 'https://apps.apple.com/us/app/simplifyvms/id6759705043',
+      githubUrl: 'https://github.com/prabhu-tiwary',
+    ),
+    ProjectData(
+      title: 'hireHQ Candidate',
+      icon: Icons.psychology_alt_rounded,
+      color: AppColors.accent,
+      storeName: "App Store",
+      description:
+          'An end-to-end talent platform that enables candidates to register, build professional profiles, discover suitable jobs, manage job preferences, and connect with top employers through direct hiring.',
+      tags: ['Flutter', 'Node.js', 'MongoDB'],
+      liveDemoUrl: 'https://apps.apple.com/us/app/hirehq-candidate/id6747578927',
+      githubUrl: 'https://github.com/prabhu-tiwary',
+    ),
+    ProjectData(
+      title: 'DsaaS.ai (Candidate and Enterprise)',
+      icon: Icons.psychology_alt_rounded,
+      color: AppColors.accent,
+      storeName: "App Store",
+      description:
+          'Developed candidate-facing and enterprise mobile applications to streamline recruitment processes, candidate engagement, and enterprise hiring workflows.',
+      tags: ['Flutter', 'Node.js', 'MongoDB'],
+      liveDemoUrl: 'https://apps.apple.com/us/app/hirehq-candidate/id6747578929',
+      githubUrl: 'https://github.com/prabhu-tiwary',
+    ),
+    ProjectData(
+      title: 'Healthcare Shift Management',
+      icon: Icons.medical_services_rounded,
+      color: AppColors.primary,
+      storeName: "App Store",
+      description:
+      'Cross-platform app for healthcare professionals to manage shifts, schedules and notifications.',
+      tags: ['Flutter', 'Firebase', 'GoRouter'],
+      liveDemoUrl: 'https://apps.apple.com/us/app/simplifyshift/id6823058430',
       githubUrl: 'https://github.com/prabhu-tiwary',
     ),
   ];
@@ -227,7 +248,7 @@ class _ProjectCard extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text('App Store',
+                      Text(project.storeName,
                           style: GoogleFonts.inter(
                               color: AppColors.secondary, fontSize: 12.5, fontWeight: FontWeight.w600)),
                       const SizedBox(width: 4),

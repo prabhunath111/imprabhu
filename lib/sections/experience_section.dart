@@ -80,7 +80,7 @@ class _TimelineTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
+    final width = MediaQuery.sizeOf(context).width;
     final mobile = isMobile(width);
     final iconSize = mobile ? 34.0 : 40.0;
     final spacing = mobile ? 12.0 : 20.0;
