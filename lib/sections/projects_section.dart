@@ -127,6 +127,13 @@ class ProjectsSection extends StatelessWidget {
           const SizedBox(height: 24),
           LayoutBuilder(
             builder: (context, constraints) {
+
+
+
+
+
+
+
               const spacing = 20.0;
               final cardWidth = (constraints.maxWidth - spacing * (columns - 1)) / columns;
               return Wrap(
@@ -205,12 +212,13 @@ class _ProjectCard extends StatelessWidget {
               project.description,
               style: AppText.body.copyWith(fontSize: 13.5),
             ),
-            const SizedBox(height: 16),
+            ///Todo: Tags hidden temporarily
+            /*const SizedBox(height: 16),
             Wrap(
               spacing: 8,
               runSpacing: 8,
               children: [for (final tag in project.tags) TagChip(label: tag)],
-            ),
+            ),*/
             const SizedBox(height: 18),
             Row(
               children: [
@@ -219,7 +227,7 @@ class _ProjectCard extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text('Play Store',
+                      Text('App Store',
                           style: GoogleFonts.inter(
                               color: AppColors.secondary, fontSize: 12.5, fontWeight: FontWeight.w600)),
                       const SizedBox(width: 4),

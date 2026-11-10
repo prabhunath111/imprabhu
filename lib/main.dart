@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
             AppNavBar(
               items: _navItems,
               // Replace this URL with a real hosted resume PDF link.
-              onDownloadResume: () => _openUrl('https://drive.google.com/file/d/1sdzqRDQ2rpyK79-c8Usv_HalLdRNReSs/view?usp=drive_link'),
+              onDownloadResume: () => _openUrl('https://drive.google.com/file/d/1_PsDEs5vtWBnc-EUZncPexBv3x10OhMv/view?usp=drive_link'),
             ),
             Expanded(
               child: ScrollRevealScope(
@@ -123,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         HeroSection(
                           onDownloadResume: () =>
-                              _openUrl('https://drive.google.com/file/d/1sdzqRDQ2rpyK79-c8Usv_HalLdRNReSs/view?usp=sharing'),
+                              _openUrl('https://drive.google.com/file/d/1_PsDEs5vtWBnc-EUZncPexBv3x10OhMv/view?usp=drive_link'),
                           onViewGithub: () => _openUrl('https://github.com/prabhunath111'),
                           onLinkedIn: () => _openUrl('https://linkedin.com/in/prabhu-india'),
                         ),
